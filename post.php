@@ -33,21 +33,20 @@ $kiekMetu = 0;
 <br><br>
         <table class="table table-striped">
         <thead>
-            <tr><td><?php while ($alga < $norimaAlga){
-                $suma = $suma + $suma * $proc / 100;
-                echo round($suma, 2);}                
-                ?>
-                </td>
-            </tr>
+        <th>Metai</th>
+        <th>Alga</th>
         </thead>
-            <tr>
-                <th scope="col"><?php print $kiekMetu++ ?></th>
-            </tr>
-                   
+        <tbody>
+            <?php while ($suma <= $norimaAlga){
+                $suma = $suma + $alga * $proc / 100;
+                $kiekMetu++;
+                echo '<tr><td>'.$kiekMetu.'</td><td>'.round($suma, 2).'</td></tr>'; 
+                }?>
+        </tbody>
         </table>
     </main>
 </html>
-                    
+
                    
                         
    
